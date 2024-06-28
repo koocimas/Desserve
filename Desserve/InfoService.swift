@@ -1,14 +1,14 @@
 //
-//  DessertService.swift
+//  InfoService.swift
 //  Desserve
 //
-//  Created by Sam Cook on 6/26/24.
+//  Created by Sam Cook on 6/27/24.
 //
 
 import Foundation
 
-class DessertsService: ObservableObject {
-    @Published var desserts: [Dessert] = []
+class InfoService: ObservableObject {
+    @Published var mealInfo: [Info] = []
     
     enum DownloadError: Error {
         case invalidURL
@@ -17,8 +17,8 @@ class DessertsService: ObservableObject {
         case unknownError
     }
     
-    func fetchDesserts() async throws {
-        let urlString = "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert"
+    func fetchInfo(mealId: String) async throws {
+        let urlString = "https://themealdb.com/api/json/v1/1/lookup.php?i=\(mealId)"
         guard let url = URL(string: urlString) else {
             throw DownloadError.invalidURL
         }
@@ -37,9 +37,9 @@ class DessertsService: ObservableObject {
         }
         
         do {
-            let decodedResponse = try JSONDecoder().decode(DessertResults.self, from: data)
+            let decodedResponse = try JSONDecoder().decode(InfoResults.self, from: data)
             await MainActor.run {
-                self.desserts = decodedResponse.meals
+                self.mealInfo = decodedResponse.meals
             }
         } catch {
             throw DownloadError.decodingError
