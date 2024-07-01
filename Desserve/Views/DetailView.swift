@@ -57,7 +57,7 @@ struct DessertDetailView: View {
                 .padding()
             }
             .alert(isPresented: $alertIsPresented) {
-                Alert(title: Text("Dessert Recipes Unavailable"),
+                Alert(title: Text("Dessert Details Unavailable"),
                       message: Text("This isn't what you desserve! Please check your network and try again."),
                       dismissButton: .default(Text("OK")))
             }
