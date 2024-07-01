@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EB4A79D82C2E52D400222A57 /* InfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A79D72C2E52D400222A57 /* InfoService.swift */; };
-		EB4A79DA2C2E531D00222A57 /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A79D92C2E531D00222A57 /* InfoModel.swift */; };
+		EB4A79DA2C2E531D00222A57 /* InfoResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A79D92C2E531D00222A57 /* InfoResults.swift */; };
+		EB4A79DE2C32326D00222A57 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4A79DD2C32326D00222A57 /* Launch Screen.storyboard */; };
+		EB5334E12C324F0000FB35DB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5334E02C324F0000FB35DB /* APIService.swift */; };
 		EB9E49A82C2CC83A004EB915 /* DesserveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9E49A72C2CC83A004EB915 /* DesserveApp.swift */; };
 		EB9E49AA2C2CC83A004EB915 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9E49A92C2CC83A004EB915 /* ContentView.swift */; };
 		EB9E49AC2C2CC83C004EB915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB9E49AB2C2CC83C004EB915 /* Assets.xcassets */; };
@@ -40,7 +42,9 @@
 
 /* Begin PBXFileReference section */
 		EB4A79D72C2E52D400222A57 /* InfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoService.swift; sourceTree = "<group>"; };
-		EB4A79D92C2E531D00222A57 /* InfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
+		EB4A79D92C2E531D00222A57 /* InfoResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoResults.swift; sourceTree = "<group>"; };
+		EB4A79DD2C32326D00222A57 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		EB5334E02C324F0000FB35DB /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		EB9E49A42C2CC83A004EB915 /* Desserve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desserve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9E49A72C2CC83A004EB915 /* DesserveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesserveApp.swift; sourceTree = "<group>"; };
 		EB9E49A92C2CC83A004EB915 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +87,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB5334E22C32504A00FB35DB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EB5334E02C324F0000FB35DB /* APIService.swift */,
+				EB9E4A182C2CFDD2004EB915 /* DessertService.swift */,
+				EB4A79D72C2E52D400222A57 /* InfoService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EB5334E32C32505F00FB35DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB9E49B52C2CC8F0004EB915 /* DessertModel.swift */,
+				EB4A79D92C2E531D00222A57 /* InfoResults.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EB5334E42C32506800FB35DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EB9E49A92C2CC83A004EB915 /* ContentView.swift */,
+				EB9E49B72C2CC980004EB915 /* RowView.swift */,
+				EB9E49B92C2CC996004EB915 /* DetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EB9E499B2C2CC83A004EB915 = {
 			isa = PBXGroup;
 			children = (
@@ -104,13 +137,9 @@
 			children = (
 				EB9E49D62C2CD485004EB915 /* Info.plist */,
 				EB9E49A72C2CC83A004EB915 /* DesserveApp.swift */,
-				EB9E49A92C2CC83A004EB915 /* ContentView.swift */,
-				EB9E49B72C2CC980004EB915 /* RowView.swift */,
-				EB9E49B92C2CC996004EB915 /* DetailView.swift */,
-				EB9E49B52C2CC8F0004EB915 /* DessertModel.swift */,
-				EB4A79D92C2E531D00222A57 /* InfoModel.swift */,
-				EB9E4A182C2CFDD2004EB915 /* DessertService.swift */,
-				EB4A79D72C2E52D400222A57 /* InfoService.swift */,
+				EB5334E42C32506800FB35DB /* Views */,
+				EB5334E32C32505F00FB35DB /* Models */,
+				EB5334E22C32504A00FB35DB /* Services */,
 				EB9E49AB2C2CC83C004EB915 /* Assets.xcassets */,
 				EB9E49AD2C2CC83C004EB915 /* Preview Content */,
 			);
@@ -120,6 +149,7 @@
 		EB9E49AD2C2CC83C004EB915 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				EB4A79DD2C32326D00222A57 /* Launch Screen.storyboard */,
 				EB9E49F12C2CF0D4004EB915 /* Poppins */,
 				EB9E49AE2C2CC83C004EB915 /* Preview Assets.xcassets */,
 			);
@@ -216,6 +246,7 @@
 				EB9E4A142C2CF0D4004EB915 /* Poppins-Thin.ttf in Resources */,
 				EB9E4A052C2CF0D4004EB915 /* Poppins-ExtraLight.ttf in Resources */,
 				EB9E4A152C2CF0D4004EB915 /* Poppins-SemiBold.ttf in Resources */,
+				EB4A79DE2C32326D00222A57 /* Launch Screen.storyboard in Resources */,
 				EB9E4A122C2CF0D4004EB915 /* Poppins-Bold.ttf in Resources */,
 				EB9E4A062C2CF0D4004EB915 /* Poppins-ThinItalic.ttf in Resources */,
 				EB9E4A072C2CF0D4004EB915 /* Poppins-ExtraLightItalic.ttf in Resources */,
@@ -243,11 +274,12 @@
 			files = (
 				EB9E4A192C2CFDD2004EB915 /* DessertService.swift in Sources */,
 				EB4A79D82C2E52D400222A57 /* InfoService.swift in Sources */,
-				EB4A79DA2C2E531D00222A57 /* InfoModel.swift in Sources */,
+				EB4A79DA2C2E531D00222A57 /* InfoResults.swift in Sources */,
 				EB9E49AA2C2CC83A004EB915 /* ContentView.swift in Sources */,
 				EB9E49A82C2CC83A004EB915 /* DesserveApp.swift in Sources */,
 				EB9E49BA2C2CC996004EB915 /* DetailView.swift in Sources */,
 				EB9E49B62C2CC8F0004EB915 /* DessertModel.swift in Sources */,
+				EB5334E12C324F0000FB35DB /* APIService.swift in Sources */,
 				EB9E49B82C2CC980004EB915 /* RowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,9 +418,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Desserve/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -416,9 +449,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Desserve/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

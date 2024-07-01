@@ -37,10 +37,10 @@ struct ContentView: View {
                 }
             }
             .alert(isPresented: $alertIsPresented) {
-                        Alert(title: Text("Dessert Recipes Unavailable"),
-                              message: Text("This isn't what you desserve! Please check your network and try again."),
-                              dismissButton: .default(Text("OK")))
-                    }
+                Alert(title: Text("Dessert Recipes Unavailable"),
+                      message: Text("This isn't what you desserve! Please check your network and try again."),
+                      dismissButton: .default(Text("OK")))
+            }
         }
     }
     var filteredDesserts: [Dessert] {

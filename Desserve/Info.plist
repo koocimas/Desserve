@@ -10,5 +10,7 @@
 		<string>Poppins-Thin.ttf</string>
 		<string>Poppins-Light.ttf</string>
 	</array>
+	<key>UILaunchScreen</key>
+	<dict/>
 </dict>
 </plist>
