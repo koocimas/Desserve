@@ -26,14 +26,12 @@ struct ContentView: View {
             .navigationTitle("desserve")
             .background(RoundedRectangle(cornerRadius: 0)
                 .fill(.banana).ignoresSafeArea())
-            .onAppear {
-                Task {
+            .task {
                     do {
                         try await dessertService.fetchDesserts()
                     } catch {
                         alertIsPresented = true
                         print("Failed to fetch desserts: \(error)")
-                    }
                 }
             }
             .alert(isPresented: $alertIsPresented) {

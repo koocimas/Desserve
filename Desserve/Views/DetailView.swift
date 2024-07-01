@@ -61,14 +61,12 @@ struct DessertDetailView: View {
                       message: Text("This isn't what you desserve! Please check your network and try again."),
                       dismissButton: .default(Text("OK")))
             }
-            .onAppear {
-                Task {
-                    do {
-                        try await infoService.fetchInfo(mealId: dessert.id)
-                    } catch {
-                        alertIsPresented = true
-                        print("Failed to fetch desserts: \(error)")
-                    }
+            .task {
+                do {
+                    try await infoService.fetchInfo(mealId: dessert.id)
+                } catch {
+                    alertIsPresented = true
+                    print("Failed to fetch desserts: \(error)")
                 }
             }
         }
